@@ -1,17 +1,27 @@
 
 import './App.css'
+import MainContent from './components/MainContent/MainContent'
+import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
+import LeftAside from './components/LeftAside/LeftAside'
+import RightAside from './components/RightAside/RightAside'
+import GlobosFlotadores from './components/GlobosFlotadores/GlobosFlotadores'
+
 
 function App() {
   
   return (
     <>
-    <div className="globos-flotadores">
-        <div className="globo globo-1"></div>
-        <div className="globo globo-2"></div>
-        <div className="globo globo-3"></div>
-    </div>
-      <Header />
+      <GlobosFlotadores />
+      <div className="layout-container">
+        <Header />
+        <LeftAside />
+        <MainContent />
+        <RightAside />
+        <Footer />
+      </div>
+      
+      
       
     </>
   )

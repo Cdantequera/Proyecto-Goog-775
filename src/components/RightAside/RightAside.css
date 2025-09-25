@@ -1,0 +1,39 @@
+.right-aside {
+            grid-area: right;
+            background-color: rgba(5, 5, 16, 0.7);
+            padding: 1.5rem 1rem;
+            border-left: 1px solid var(--neon-pink);
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .right-aside::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -1px;
+            width: 2px;
+            background: linear-gradient(to bottom, 
+                transparent, 
+                var(--neon-pink), 
+                transparent);
+            animation: pulse 2s infinite;
+        }
+
+        .data-widget {
+            background: rgba(189, 0, 255, 0.1);
+            border: 1px solid var(--neon-purple);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            transform: translateZ(0);
+            transition: all 0.3s ease;
+        }
+        
+        .data-widget:hover {
+            transform: translateY(-5px) translateZ(0);
+            box-shadow: 0 0 15px var(--neon-purple);
+        }

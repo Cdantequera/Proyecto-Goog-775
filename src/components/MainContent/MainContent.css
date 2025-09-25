@@ -1,0 +1,28 @@
+main {
+            grid-area: main;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .hologram-container {
+            perspective: 1000px;
+            margin-bottom: 2rem;
+        }
+        
+        .hologram {
+            background: rgba(5, 5, 16, 0.6);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transform-style: preserve-3d;
+            transform: rotateX(5deg);
+            transition: transform 0.5s ease;
+            border: 1px solid var(--neon-green);
+            box-shadow: 0 0 15px rgba(0, 255, 157, 0.3),
+                        inset 0 0 15px rgba(0, 255, 157, 0.1);
+        }
+        
+        .hologram:hover {
+            transform: rotateX(0deg) translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.5),
+                        inset 0 0 20px rgba(0, 255, 157, 0.2);
+        }
